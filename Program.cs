@@ -15,7 +15,7 @@ class Program
 }*/
 
 //Estrutura if
-namespace projeto_aula;
+/*namespace projeto_aula;
 class Program
 {
     static void Main(string[] args)
@@ -30,6 +30,36 @@ class Program
         else
         {
             Console.WriteLine("Não foi encontrado valor igual!!!");
+        }
+    }
+}*/
+
+//Usando Switch
+namespace projeto_aula;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Escolha um Animal...");
+        var pets = Console.ReadLine();
+        switch(pets)
+        {
+            case "gatos":
+            Console.WriteLine("Temos Gatos!!!");
+            break;
+            case "cachorros":
+            Console.WriteLine("Temos Cachorros!!!");
+            break;
+            case "papagaios":
+            Console.WriteLine("Temos Papagaios!!!");
+            break;
+            case "cavalos":
+            Console.WriteLine("Temos Cavalos!!!");
+            break;
+            default:
+            Console.WriteLine("Esse não temos");
+            break;
         }
     }
 }
