@@ -35,7 +35,7 @@ class Program
 }*/
 
 //Usando Switch
-namespace projeto_aula;
+/*namespace projeto_aula;
 
 class Program
 {
@@ -61,6 +61,34 @@ class Program
             Console.WriteLine("Esse não temos");
             break;
         }
+    }
+}*/
+//Loops
+namespace projeto_aula;
+
+/*class Program 
+{
+    static void Main(string[] args)
+    {
+        var n = 1;
+        while(n<=10)
+        {
+            Console.WriteLine(n);
+            n++;
+        }
+    }
+}*/
+class Program
+{
+    static void Main(string[] args)
+    {
+        var n = 1;
+        do
+        {
+            Console.WriteLine(n);
+            n++;
+        }
+        while(n<=10);
     }
 }
 
