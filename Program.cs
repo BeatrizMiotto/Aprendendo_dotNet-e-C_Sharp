@@ -14,6 +14,8 @@ class Program
     }
 }*/
 
+/****************************************************************/
+
 //Estrutura if
 /*namespace projeto_aula;
 class Program
@@ -33,6 +35,8 @@ class Program
         }
     }
 }*/
+
+/****************************************************************/
 
 //Usando Switch
 /*namespace projeto_aula;
@@ -63,7 +67,10 @@ class Program
         }
     }
 }*/
-//Loops
+
+/****************************************************************/
+
+//Loops While DoWhile For For
 namespace projeto_aula;
 
 /*class Program 
@@ -78,7 +85,7 @@ namespace projeto_aula;
         }
     }
 }*/
-class Program
+/*class Program
 {
     static void Main(string[] args)
     {
@@ -89,6 +96,16 @@ class Program
             n++;
         }
         while(n<=10);
+    }
+}*/
+class Program
+{
+    static void Main(string[] args)
+    {
+        for(int n = 1; n<=10; n++)
+        {
+            Console.WriteLine(n);
+        }
     }
 }
 
