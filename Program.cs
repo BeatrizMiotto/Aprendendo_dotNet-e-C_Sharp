@@ -140,7 +140,7 @@ namespace projeto_aula;
 
 //Array e Collection
 
-class Program 
+/*class Program 
 {
     static void Main(string[] args)
     {
@@ -153,6 +153,22 @@ class Program
         {
             Console.WriteLine(nomes);
         } 
+    }
+}*/
+class Program
+{
+    static void Main(string[] args)
+    {
+        List< string > nome = new List< string>();
+        
+        nome.Add("Beatriz");
+        nome.Add("Eduardo");
+        nome.Add("Jasmine");
+
+        foreach(string nomes in nome)
+        {
+            Console.WriteLine(nomes);
+        }
     }
 }
 
