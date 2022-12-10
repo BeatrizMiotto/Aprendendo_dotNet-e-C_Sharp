@@ -98,13 +98,24 @@ namespace projeto_aula;
         while(n<=10);
     }
 }*/
-class Program
+/*class Program
 {
     static void Main(string[] args)
     {
         for(int n = 1; n<=10; n++)
         {
             Console.WriteLine(n);
+        }
+    }
+}*/
+class Program
+{
+    static void Main(string[] args)
+    {
+        string [] lista = {"Amora", "Uva", "Morango", "Manga"};
+        foreach(string l in lista)
+        {
+            Console.WriteLine(l);
         }
     }
 }
