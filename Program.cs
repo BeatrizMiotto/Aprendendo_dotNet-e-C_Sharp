@@ -120,7 +120,7 @@ namespace projeto_aula;
     }
 }*/
 //Funcão Recursiva
-class Program
+/*class Program
 {
     static void Main(string[] args)
     {
@@ -134,9 +134,27 @@ class Program
             looping(n + 1);
         }
     }
-}
+}*/
 
 /*****************************************************************************/
+
+//Array e Collection
+
+class Program 
+{
+    static void Main(string[] args)
+    {
+        string  [] nome = new string[3];
+        nome[0] = "Bia";
+        nome[1] = "Dudu";
+        nome[2] = "Mimi";
+
+        foreach(string nomes in nome)
+        {
+            Console.WriteLine(nomes);
+        } 
+    }
+}
 
 //Exercicio 1
 /*Seu roberto é um comerciante e precisa de um sistema 
