@@ -70,7 +70,7 @@ class Program
 
 /****************************************************************/
 
-//Loops While DoWhile For For
+//Loops While DoWhile For Foreach 
 namespace projeto_aula;
 
 /*class Program 
@@ -108,7 +108,7 @@ namespace projeto_aula;
         }
     }
 }*/
-class Program
+/*class Program
 {
     static void Main(string[] args)
     {
@@ -118,7 +118,25 @@ class Program
             Console.WriteLine(l);
         }
     }
+}*/
+//Funcão Recursiva
+class Program
+{
+    static void Main(string[] args)
+    {
+       looping(1); 
+    }
+    public static void looping(int n)
+    {
+        Console.WriteLine(n);
+        if(n < 10)
+        {
+            looping(n + 1);
+        }
+    }
 }
+
+/*****************************************************************************/
 
 //Exercicio 1
 /*Seu roberto é um comerciante e precisa de um sistema 
