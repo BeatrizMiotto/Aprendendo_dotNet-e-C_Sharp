@@ -155,7 +155,7 @@ namespace projeto_aula;
         } 
     }
 }*/
-class Program
+/*class Program
 {
     static void Main(string[] args)
     {
@@ -170,7 +170,9 @@ class Program
             Console.WriteLine(nomes);
         }
     }
-}
+}*/
+
+/*************************************************************************/
 
 //Exercicio 1
 /*Seu roberto é um comerciante e precisa de um sistema 
@@ -194,6 +196,131 @@ no produto terá os atributos
 {
     static void Main(string[] args)
     {
-        var lista = [];
+        
+        Console.WriteLine("Escolha um das opções:");
+        Console.WriteLine("1- Cadastrar Produto");
+        Console.WriteLine("2- Listar Produto");
+        Console.WriteLine("3- Total do estoque");
+        Console.WriteLine("4- Sair");
+        var menu = Convert.ToInt16(Console.ReadLine());
+        int[] id = new int[3];
+        string[] nome = new string[3];
+        int[] quantidade = new int[3];
+        string[] produtos = new string[3];
+        
+        switch(menu)
+        {
+            case 1:
+            Console.WriteLine("Cadastrar Produto");
+            Console.WriteLine("Produto Cadastrado");
+            for(int p = 0; p < id.Length ; p++)
+            {
+                Console.WriteLine("Id: ");
+                id[p] = Convert.ToInt16(Console.ReadLine());
+                
+                Console.WriteLine("Nome: ");
+                nome[p] = Console.ReadLine();
+
+                Console.WriteLine("quantidade: ");
+                quantidade[p] = Convert.ToInt16(Console.ReadLine()); 
+            }
+            break;
+            case 2:
+            Console.WriteLine("Lista de Produtos");
+            for(int p = 0; p < id.Length ; p++)
+            {
+                Console.WriteLine("Id: " + id[p] +" | "+ "Nome: " + nome[p] + " | "+"Quantidade: " + quantidade[p]); 
+            }
+            break;
+            case 3:
+            Console.WriteLine("Somar Itens");
+            int soma = quantidade.Sum(); 
+            Console.WriteLine(soma);
+            break;
+            case 4:
+            Console.WriteLine("Saindo....");
+            Console.WriteLine("Obrigada!!!");
+            break;
+        }
+    }
+}*/
+
+class Program
+{
+    public static void menu()
+    {
+        Console.WriteLine("Escolha um das opções:");
+        Console.WriteLine("1- Cadastrar Produto");
+        Console.WriteLine("2- Listar Produto");
+        Console.WriteLine("3- Total do estoque");
+        Console.WriteLine("4- Sair");
+        var menu = Convert.ToInt16(Console.ReadLine());
+        
+    }
+    static void Main(string [] args)
+    {
+        Console.WriteLine("********************************");
+        menu();
+        Console.WriteLine("********************************");
+        int[] id = new int[3];
+        string[] nome = new string[3];
+        int[] quantidade = new int[3];
+        string[] produtos = new string[3];
+        
+        Console.WriteLine("Cadastre o Produto: ");
+        for(int p = 0; p < id.Length ; p++)
+        {
+            Console.WriteLine("Id: ");
+            id[p] = Convert.ToInt16(Console.ReadLine());
+
+            Console.WriteLine("Nome: ");
+            nome[p] = Console.ReadLine();
+
+            Console.WriteLine("quantidade: ");
+            quantidade[p] = Convert.ToInt16(Console.ReadLine()); 
+        }
+        Console.WriteLine("********************************");
+        menu();
+        Console.WriteLine("********************************");
+        for(int p = 0; p < id.Length ; p++)
+        {
+            Console.WriteLine("Id: " + id[p] +" | "+ "Nome: " + nome[p] + " | "+"Quantidade: " + quantidade[p]); 
+        }
+        Console.WriteLine("********************************");
+        menu();
+        Console.WriteLine("********************************");
+        int soma = quantidade.Sum(); 
+        Console.WriteLine("A quantidade total de Produtos é: " + soma);
+        Console.WriteLine("********************************");
+        menu();
+        Console.WriteLine("********************************");
+        Console.WriteLine("Obrigada!!!");
+        Console.WriteLine("Fim!!!");
+    }
+}
+
+/*******************************************************************************************/
+
+/*class Program 
+{
+    public class Produto{
+        public int Id{get; set;}
+        public int Nome {get; set;}
+        public int Quantidade{get; set;}
+    }
+
+    static void Main(string[] args)
+    { 
+        List<Produto> listaProdutos = new List<Produto>();
+        Produto produto1 = new Produto();
+        produto1.Id = 1;
+        produto1.Nome = 2;
+        produto1.Quantidade = 3;
+        listaProdutos.Add(produto1);
+        foreach(Produto produto in listaProdutos){
+            Console.WriteLine(produto.Id);
+            Console.WriteLine(produto.Nome);
+            Console.WriteLine(produto.Quantidade);
+        }
     }
 }*/
