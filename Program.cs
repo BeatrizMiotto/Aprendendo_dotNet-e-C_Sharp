@@ -7,9 +7,7 @@ namespace Escola
     {
         public static void Main(string[] args)
         {
-            var nomes = new List<string>();
-            var matriculas = new List<string>();
-            var notas = new List<double[]>();
+            var alunos = new List<Aluno>();
 
             while(true)
             {
@@ -25,10 +23,10 @@ namespace Escola
                 switch(opcao)
                 {
                     case 1:
-                        cadastrarAluno(nomes, matriculas, notas);
+                        cadastrarAluno(alunos);
                         break;
                     case 2:
-                        listarAlunos(nomes, matriculas, notas);
+                        listarAlunos(alunos);
                         break;
                     case 3:
                         return;
@@ -41,10 +39,10 @@ namespace Escola
             }
         }
 
-        private static void listarAlunos(List<string> nomes, List<string> matriculas, List<double[]> notas)
+        private static void listarAlunos(List<Aluno> alunos)
         {
             Console.Clear();
-            if(nomes.Count == 0)
+            if(alunos.Count == 0)
             {
                 Console.Clear();
                 Console.WriteLine("Nenhum aluno cadastrado!!!");
@@ -52,18 +50,18 @@ namespace Escola
                 return;
             }
 
-            for(var i=0; i < nomes.Count; i++)
+            foreach(var aluno in alunos)
             {
                 Console.WriteLine("======================");
-                Console.WriteLine("Nome: " + nomes[i]);
-                Console.WriteLine("Matricula: " + matriculas[i]);
-                Console.WriteLine("Notas: " + string.Join(",", notas[i]));
+                Console.WriteLine("Nome: " + aluno.nome);
+                Console.WriteLine("Matricula: " + aluno.matricula);
+                Console.WriteLine("Notas: " + string.Join(",", aluno.notas));
 
                 double soma = 0;
-                foreach(var nota in notas[i])
+                foreach(var nota in aluno.notas)
                     soma+= nota;
                 
-                double media = soma / notas[i].Length;
+                double media = soma / aluno.notas.Count;
                 
                 Console.WriteLine("Média: " + media.ToString("#.##"));
                 Console.WriteLine("Situação: " + (media > 6 ? "Aprovado" : "Reprovado"));
@@ -72,30 +70,30 @@ namespace Escola
             Thread.Sleep(5000);
         }
 
-        private static void cadastrarAluno(List<string> nomes, List<string> matriculas, List<double[]> notas)
+        private static void cadastrarAluno(List<Aluno> alunos)
         {
+            var aluno = new Aluno();
             Console.Clear();
             Console.WriteLine("Digite o nome do aluno: ");
-            var nome = Console.ReadLine();
+            aluno.nome = Console.ReadLine();
 
             Console.WriteLine("Digite a matricula: ");
-            var matricula = Console.ReadLine();
+            aluno.matricula = Console.ReadLine();
 
             Console.WriteLine("Digite as notas, separando por vírgulas(,): ");
             var sNotas = Console.ReadLine();
 
             var sArrayNotas = sNotas.Split(',');
-            var notasDouble = new double[sArrayNotas.Length];
+            var listaNotas = new List<double>();
 
-            for(var i=0; i<sArrayNotas.Length; i++)
+            foreach(var sNota in sArrayNotas)
             {
                 double nota = 0;
-                double.TryParse(sArrayNotas[i], out nota);
-                notasDouble[i] = nota;
+                double.TryParse(sNota, out nota);
+                listaNotas.Add(nota);
             }
-            nomes.Add(nome);
-            matriculas.Add(matricula);
-            notas.Add(notasDouble);
+            aluno.notas = listaNotas;
+            alunos.Add(aluno);
 
             Console.Clear();
             Console.WriteLine("Aluno cadastrado com sucesso!!!");
