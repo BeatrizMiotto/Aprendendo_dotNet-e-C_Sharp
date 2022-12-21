@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "3sbwF/Z6T2D7OZ6NcmxAywrY81pWmBXYw8BXiFTcmzpYwlR30HhsDpbmq5gIzVNRCtRKjrFzDfKnTzDOhaPDVw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\usuario\\Desktop\\Programas Miotto\\.net_c#\\Exercicios\\Exercicios.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\usuario\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
